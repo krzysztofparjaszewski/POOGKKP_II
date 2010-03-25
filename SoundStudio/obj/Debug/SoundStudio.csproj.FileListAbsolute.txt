@@ -1,0 +1,16 @@
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\SoundStudio.Properties.Resources.resources
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\SoundStudio.csproj.GenerateResource.Cache
+C:\doc\Szkoła\UWr\poo\SoundStudio\bin\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWr\poo\SoundStudio\bin\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWr\poo\SoundStudio\obj\Debug\SoundStudio.frmStudio.resources
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\bin\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\bin\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.Properties.Resources.resources
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.frmStudio.resources
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.csproj.GenerateResource.Cache
+C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.pdb

@@ -1,0 +1,12 @@
+C:\doc\Szkoła\UWr\poo\Te\obj\Debug\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWr\poo\Te\bin\Debug\Test.dll
+C:\doc\Szkoła\UWr\poo\Te\bin\Debug\Test.pdb
+C:\doc\Szkoła\UWr\poo\Te\obj\Debug\Test.dll
+C:\doc\Szkoła\UWr\poo\Te\obj\Debug\Test.pdb
+C:\doc\Szkoła\UWr\poo\Test\bin\Debug\Test.dll
+C:\doc\Szkoła\UWr\poo\Test\bin\Debug\Test.pdb
+C:\doc\Szkoła\UWr\poo\Test\obj\Debug\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWr\poo\Test\obj\Debug\Test.dll
+C:\doc\Szkoła\UWr\poo\Test\obj\Debug\Test.pdb
+C:\doc\Szkoła\UWr\poo\Test\bin\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWr\poo\Test\bin\Debug\SoundStudio.pdb
