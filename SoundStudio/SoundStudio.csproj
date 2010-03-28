@@ -49,11 +49,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Mixer.cs" />
-    <Compile Include="Controller\State.cs" />
+    <Compile Include="Controller\StateController.cs" />
+    <Compile Include="Model\Consts\Paths.cs" />
     <Compile Include="Model\Icon.cs" />
     <Compile Include="Model\Melody.cs" />
     <Compile Include="Model\Sound.cs" />
     <Compile Include="Model\SoundPosition.cs" />
+    <Compile Include="Model\States\State.cs" />
+    <Compile Include="Model\States\StateError.cs" />
+    <Compile Include="Model\States\StateInit.cs" />
+    <Compile Include="Model\States\StatePlay.cs" />
+    <Compile Include="Model\States\StateReady.cs" />
     <Compile Include="View\Forms\frmStudio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\Forms\HostForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\PlayButton.cs">
       <SubType>Component</SubType>

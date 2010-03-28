@@ -14,3 +14,11 @@ C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.Properties.Resource
 C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.frmStudio.resources
 C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.csproj.GenerateResource.Cache
 C:\doc\Szkoła\UWR\poo\lab\SoundStudio\obj\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\bin\Debug\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\bin\Debug\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\SoundStudio.Properties.Resources.resources
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\SoundStudio.csproj.GenerateResource.Cache
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Debug\SoundStudio.View.Forms.frmStudio.resources

@@ -1,0 +1,8 @@
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\bin\Release\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\bin\Release\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\ResolveAssemblyReference.cache
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\SoundStudio.Properties.Resources.resources
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\SoundStudio.csproj.GenerateResource.Cache
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\SoundStudio.exe
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\SoundStudio.pdb
+C:\doc\Szkoła\UWR\poo\lab\POOGKKP_II\SoundStudio\obj\Release\SoundStudio.View.Forms.frmStudio.resources

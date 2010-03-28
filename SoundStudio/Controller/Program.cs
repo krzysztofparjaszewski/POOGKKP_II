@@ -15,7 +15,7 @@ namespace SoundStudio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStudio());
+            Application.Run(new View.Forms.frmStudio());
         }
     }
 }

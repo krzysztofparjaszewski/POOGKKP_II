@@ -23,7 +23,7 @@ namespace SoundStudio.Model
         
 
         // Add a sound to melody
-        public virtual void Add(SoundPosition position, Sound sound ) {
+        public new void Add(SoundPosition position, Sound sound ) {
             base.Add(position, sound);
         }
 

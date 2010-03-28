@@ -1,6 +1,6 @@
-﻿namespace SoundStudio
+﻿namespace SoundStudio.View.Forms
 {
-    partial class frmStudio
+    partial class frmStudio : HostForm 
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudio));
             this.container = new System.Windows.Forms.SplitContainer();
+            this.btnClearStave = new System.Windows.Forms.Button();
             this.pnlMelody = new System.Windows.Forms.Panel();
             this.btnStudioPlay = new System.Windows.Forms.Button();
             this.container.Panel2.SuspendLayout();
@@ -45,11 +46,24 @@
             // 
             // container.Panel2
             // 
+            this.container.Panel2.Controls.Add(this.btnClearStave);
             this.container.Panel2.Controls.Add(this.pnlMelody);
             this.container.Panel2.Controls.Add(this.btnStudioPlay);
             this.container.Size = new System.Drawing.Size(588, 371);
             this.container.SplitterDistance = 180;
             this.container.TabIndex = 0;
+            // 
+            // btnClearStave
+            // 
+            this.btnClearStave.Image = ((System.Drawing.Image)(resources.GetObject("btnClearStave.Image")));
+            this.btnClearStave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClearStave.Location = new System.Drawing.Point(9, 151);
+            this.btnClearStave.Name = "btnClearStave";
+            this.btnClearStave.Size = new System.Drawing.Size(155, 24);
+            this.btnClearStave.TabIndex = 2;
+            this.btnClearStave.Text = "Clear Stave";
+            this.btnClearStave.UseVisualStyleBackColor = true;
+            this.btnClearStave.Click += new System.EventHandler(this.btnClearStave_Click);
             // 
             // pnlMelody
             // 
@@ -59,18 +73,19 @@
             this.pnlMelody.Name = "pnlMelody";
             this.pnlMelody.Size = new System.Drawing.Size(566, 130);
             this.pnlMelody.TabIndex = 1;
-            this.pnlMelody.MouseClick += new System.Windows.Forms.MouseEventHandler(Melody_MouseClick);
+            this.pnlMelody.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Melody_MouseClick);
             // 
             // btnStudioPlay
             // 
             this.btnStudioPlay.Image = ((System.Drawing.Image)(resources.GetObject("btnStudioPlay.Image")));
             this.btnStudioPlay.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStudioPlay.Location = new System.Drawing.Point(447, 151);
+            this.btnStudioPlay.Location = new System.Drawing.Point(446, 151);
             this.btnStudioPlay.Name = "btnStudioPlay";
             this.btnStudioPlay.Size = new System.Drawing.Size(129, 24);
             this.btnStudioPlay.TabIndex = 0;
             this.btnStudioPlay.Text = "Play...";
             this.btnStudioPlay.UseVisualStyleBackColor = true;
+            this.btnStudioPlay.Click += new System.EventHandler(this.btnStudioPlay_Click);
             // 
             // frmStudio
             // 
@@ -78,6 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 371);
             this.Controls.Add(this.container);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStudio";
             this.Text = "Sound Studio by GK&KP POO 2010 | II@UWr";
             this.container.Panel2.ResumeLayout(false);
@@ -93,6 +109,7 @@
         private System.Windows.Forms.SplitContainer container;
         private System.Windows.Forms.Button btnStudioPlay;
         private System.Windows.Forms.Panel pnlMelody;
+        private System.Windows.Forms.Button btnClearStave;
     }
 }
 

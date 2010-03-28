@@ -6,31 +6,35 @@ using System.Text;
 namespace SoundStudio.Model
 {
     // Describes position of a sound in Melody
-    public class SoundPosition : System.Collections.Generic.Comparer<SoundPosition>
+    public class SoundPosition : IComparable<SoundPosition>
     {
 
-    #region " Properties "
+    #region " Properties, Constructor "
 
         // position in the melody
         private double position;
+
+        public SoundPosition(int x) {
+            this.position = x;
+        }
 
     #endregion
    
     #region " Overrides "
     
-        public override int Compare(SoundPosition x, SoundPosition y)
-        {
-            if (x.Position > y.Position) return 1;
-            else if (x.Position.Equals(y.Position)) return 0;
-            else return -1;
+        public int Compare(SoundPosition x, SoundPosition y) {
+            return x.Position.CompareTo(y.Position);
         }
-    
+
+        public int CompareTo(SoundPosition x) {
+            return this.Position.CompareTo(x.Position);
+        }
+
     #endregion
 
     #region " Fields "
 
-
-        protected double Position
+        public double Position
         {
             get { 
                 return position; 
