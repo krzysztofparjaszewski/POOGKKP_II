@@ -15,8 +15,13 @@ namespace SoundStudio.View.Forms
 
         // state controller
         protected Controller.StateController stateController;
+        
         // mixer
         protected Controller.Mixer mixer;
+
+        // stave controller
+        protected Controller.StaveController staveController;
+
 
         public virtual void ClearStave()
         {
@@ -28,7 +33,7 @@ namespace SoundStudio.View.Forms
             throw new NotImplementedException();
         }
 
-        public virtual void MovePointer(double thisPosition)
+        public virtual void MovePointer(int thisPosition)
         {
             throw new NotImplementedException();
         }

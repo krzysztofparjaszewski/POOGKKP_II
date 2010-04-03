@@ -32,14 +32,18 @@
             this.container = new System.Windows.Forms.SplitContainer();
             this.btnClearStave = new System.Windows.Forms.Button();
             this.pnlMelody = new System.Windows.Forms.Panel();
+            this.pbMelodyPointer = new System.Windows.Forms.PictureBox();
             this.btnStudioPlay = new System.Windows.Forms.Button();
             this.container.Panel2.SuspendLayout();
             this.container.SuspendLayout();
+            this.pnlMelody.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMelodyPointer)).BeginInit();
             this.SuspendLayout();
             // 
             // container
             // 
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.IsSplitterFixed = true;
             this.container.Location = new System.Drawing.Point(0, 0);
             this.container.Name = "container";
             this.container.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -55,6 +59,7 @@
             // 
             // btnClearStave
             // 
+            this.btnClearStave.AllowDrop = true;
             this.btnClearStave.Image = ((System.Drawing.Image)(resources.GetObject("btnClearStave.Image")));
             this.btnClearStave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClearStave.Location = new System.Drawing.Point(9, 151);
@@ -67,13 +72,25 @@
             // 
             // pnlMelody
             // 
-            this.pnlMelody.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMelody.BackgroundImage")));
+            this.pnlMelody.BackColor = System.Drawing.Color.AliceBlue;
+            this.pnlMelody.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMelody.Controls.Add(this.pbMelodyPointer);
             this.pnlMelody.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pnlMelody.Location = new System.Drawing.Point(9, 9);
             this.pnlMelody.Name = "pnlMelody";
             this.pnlMelody.Size = new System.Drawing.Size(566, 130);
             this.pnlMelody.TabIndex = 1;
             this.pnlMelody.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Melody_MouseClick);
+            // 
+            // pbMelodyPointer
+            // 
+            this.pbMelodyPointer.BackColor = System.Drawing.Color.OrangeRed;
+            this.pbMelodyPointer.Location = new System.Drawing.Point(281, 0);
+            this.pbMelodyPointer.Name = "pbMelodyPointer";
+            this.pbMelodyPointer.Size = new System.Drawing.Size(5, 130);
+            this.pbMelodyPointer.TabIndex = 2;
+            this.pbMelodyPointer.TabStop = false;
+            this.pbMelodyPointer.Visible = false;
             // 
             // btnStudioPlay
             // 
@@ -98,6 +115,8 @@
             this.Text = "Sound Studio by GK&KP POO 2010 | II@UWr";
             this.container.Panel2.ResumeLayout(false);
             this.container.ResumeLayout(false);
+            this.pnlMelody.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMelodyPointer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -110,6 +129,7 @@
         private System.Windows.Forms.Button btnStudioPlay;
         private System.Windows.Forms.Panel pnlMelody;
         private System.Windows.Forms.Button btnClearStave;
+        private System.Windows.Forms.PictureBox pbMelodyPointer;
     }
 }
 

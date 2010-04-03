@@ -18,6 +18,11 @@ namespace SoundStudio.View.Forms
             InitializeComponent();
             InitButtons();
             InitControllers();
+            InitPointer();
+        }
+
+        private void InitPointer() {
+            this.pnlMelody.Controls.Add(this.pbMelodyPointer);
         }
 
         protected void InitButtons()
@@ -34,7 +39,7 @@ namespace SoundStudio.View.Forms
                 p.Location = new Point(p.x, p.y);
                 p.Width = p.width;
                 p.Height = p.height;
-                p.Image = p.Icon.Image;
+                p.Image = p.Image;
                 p.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
                 p.TextAlign = ContentAlignment.MiddleRight;
                 p.MouseClick += new MouseEventHandler(MouseClick);
@@ -46,20 +51,19 @@ namespace SoundStudio.View.Forms
         protected void InitControllers() {
             this.mixer = new Controller.Mixer();
             this.stateController  = new Controller.StateController();
+            this.staveController = new Controller.StaveController(this.stateController, this.mixer.melody);
             //mixer.stave.setPanel(this.pnlMelody);
         }
 
         public override void ClearStave() {
             this.pnlMelody.Controls.Clear();
+            this.pnlMelody.Controls.Add(this.pbMelodyPointer);
         }
 
         public override void RefreshStave() {
-            foreach (System.Windows.Forms.PictureBox pict in mixer.Pictures) {
-                PictureBox pb = new PictureBox();
-                pb.Image = pict.Image;
-                pb.Width = 32; pb.Height = 32;
-                pb.Location = pict.Location;
-                this.pnlMelody.Controls.Add(pb);
+            this.ClearStave();
+            foreach (View.MovablePictureBox pict in staveController.stave) {
+                this.pnlMelody.Controls.Add(pict);
             }
         }
 
@@ -71,8 +75,8 @@ namespace SoundStudio.View.Forms
             this.lastClickedButton = clickedButton;
         }
 
-        public void PanelClicked(int x, int y) {
-            this.stateController.PanelClicked(x, y, this.lastClickedButton,this.mixer, this);            
+        public void StaveClicked(int x, int y) {
+            this.staveController.StaveClicked(x, y, this.lastClickedButton, this.mixer, this);            
         }
 
         public void PlayClicked()
@@ -81,29 +85,21 @@ namespace SoundStudio.View.Forms
             this.stateController.PlayClicked(this.mixer, this);
         }
 
-        public override void MovePointer(double thisPosition) {
-            System.Windows.Forms.PictureBox pb;
-            System.Windows.Forms.Control[] controlsFound = this.pnlMelody.Controls.Find("pbPointer",true);
-            if(controlsFound.Length.Equals(0)) {
-                pb = new PictureBox();
-                pb.Name = "pbPointer";
-                pb.Width = 5;
-                pb.Height = 130;
-            } else {
-                pb = (System.Windows.Forms.PictureBox)controlsFound[0];
+        public override void MovePointer(int newPosition) {
+            if ((newPosition > 0) && (this.pbMelodyPointer.Visible == false)) {
+                this.pbMelodyPointer.Visible = true;
             }
-            pb.Location = new Point(Int32.Parse(Math.Floor(thisPosition).ToString()), 0);
-            string localPath = Model.Consts.Paths.CombinePath(Model.Consts.Paths.Pointer.Path);
-            pb.Image = System.Drawing.Image.FromFile(localPath);
-            if (controlsFound.Length.Equals(0)) {
-                this.pnlMelody.Controls.Add(pb);  
+            if (Math.Abs(newPosition-this.pnlMelody.Width)<this.pbMelodyPointer.Width) {
+                this.pbMelodyPointer.Visible = false;
             }
+            this.pbMelodyPointer.Left = newPosition;
+            this.pbMelodyPointer.Refresh();
             this.pnlMelody.Refresh();
         }
         
         private void ClearStaveClicked() {
             // Clears the data collection and after all refresh the view
-            this.stateController.ClearStaveClicked(this.mixer, this);
+            this.stateController.ClearStaveClicked(this.staveController, this.mixer, this);
         }
 
 
@@ -111,12 +107,12 @@ namespace SoundStudio.View.Forms
 
     #region " Formal Events "
 
-        new void MouseClick(object sender, MouseEventArgs e) {
+        new void MouseClick(object sender, MouseEventArgs newPosition) {
             this.ButtonClicked((View.PlayButton)sender);
         }
 
         void Melody_MouseClick(object sender, System.Windows.Forms.MouseEventArgs e) {
-            this.PanelClicked(e.X, e.Y);
+            this.StaveClicked(e.X, e.Y);
         }
 
         void btnStudioPlay_Click(object sender, EventArgs e) {
@@ -128,9 +124,6 @@ namespace SoundStudio.View.Forms
             this.ClearStaveClicked();
         }
 
-    #endregion
-
-
-  
+    #endregion  
     }
 }

@@ -42,13 +42,13 @@ namespace SoundStudio.Controller
         public void ChangeState(Model.States.State changeToThisState) {
             this.currentState = changeToThisState;
         }
-        public void ClearStaveClicked(Mixer mixer, View.Forms.HostForm hostForm)
+        public void ClearStaveClicked(StaveController staveController, Mixer mixer, View.Forms.HostForm hostForm)
         {
-            this.currentState.ClearStaveClicked(mixer, hostForm);
+            this.currentState.ClearStaveClicked(staveController, mixer, hostForm);
         }
-        public void PanelClicked(int x, int y, SoundStudio.View.PlayButton playButton, Mixer mixer,SoundStudio.View.Forms.HostForm hostForm)
+        public void PanelClicked(int x, int y, SoundStudio.View.PlayButton playButton, StaveController staveController, Mixer mixer,SoundStudio.View.Forms.HostForm hostForm)
         {
-            this.currentState.PanelClicked(x, y, playButton, mixer, hostForm);
+            this.currentState.PanelClicked(x, y, playButton,staveController, mixer, hostForm);
         }
         public void PlayClicked(Controller.Mixer mixer, View.Forms.HostForm hostForm)
         {

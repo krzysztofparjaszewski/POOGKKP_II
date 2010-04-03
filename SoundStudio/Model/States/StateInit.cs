@@ -15,15 +15,15 @@ namespace SoundStudio.Model.States
             this.stateReady = new StateReady(controller, this.stateError);    
         }
 
-        public override void ClearStaveClicked(SoundStudio.Controller.Mixer mixer, SoundStudio.View.Forms.HostForm hostForm)
+        public override void ClearStaveClicked(Controller.StaveController staveController, Controller.Mixer mixer, SoundStudio.View.Forms.HostForm hostForm)
         {
 
         }
 
-        public override void PanelClicked(int x, int y, SoundStudio.View.PlayButton playButton, SoundStudio.Controller.Mixer mixer, SoundStudio.View.Forms.HostForm hostForm)
+        public override void PanelClicked(int x, int y, SoundStudio.View.PlayButton playButton, Controller.StaveController staveController, Controller.Mixer mixer, SoundStudio.View.Forms.HostForm hostForm)
         {
             this.stateController.ChangeState(this.stateReady );
-            this.stateReady.PanelClicked(x, y, playButton, mixer, hostForm);
+            this.stateReady.PanelClicked(x, y, playButton, staveController, mixer, hostForm);
         }
 
         public override void PlayClicked(Controller.Mixer mixer, View.Forms.HostForm hostForm)

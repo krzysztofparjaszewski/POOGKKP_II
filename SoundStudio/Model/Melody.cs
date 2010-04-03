@@ -6,14 +6,10 @@ using System.Text;
 namespace SoundStudio.Model
 {
     // Collection of sounds
-    public class Melody : System.Collections.Generic.SortedList<SoundPosition, Sound>
+    public class Melody : SortedDictionary <SoundPosition, Sound>
     {
+
     #region "Init & Protected"
-
-        // Describes melody duration
-        protected double duration;
-
-
         public void Init() { 
         
         }
@@ -21,20 +17,16 @@ namespace SoundStudio.Model
 
     #region "Public Methods"
         
-
         // Add a sound to melody
-        public new void Add(SoundPosition position, Sound sound ) {
-            base.Add(position, sound);
+        public new void Add(SoundPosition soundPosition, Sound sound) {
+            base.Add(soundPosition, sound);
         }
-
 
         // Errase the whole melody
         public void ClearAll() {
-            base.Clear();
-        
+            base.Clear();        
         }
 
-        
     #endregion
 
     }

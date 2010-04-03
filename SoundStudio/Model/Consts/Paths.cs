@@ -8,19 +8,19 @@ namespace SoundStudio.Model.Consts
     public static class Paths
     {
         public struct Drum {
-            public const string Name = @"drum";
+            public const string Name = @"Drum";
             public const string Sound = @"\Model\Sounds\drum.wav";
             public const string Icon = @"\View\Images\drum.gif";
         }
         public struct Frog
         {
-            public const string Name = @"frog";
+            public const string Name = @"Frog";
             public const string Sound = @"\Model\Sounds\frog.wav";
             public const string Icon = @"\View\Images\frog.gif";
         }
         public struct Horn
         {
-            public const string Name = @"horn";
+            public const string Name = @"Horn";
             public const string Sound = @"\Model\Sounds\horn.wav";
             public const string Icon = @"\View\Images\horn.gif";
         }

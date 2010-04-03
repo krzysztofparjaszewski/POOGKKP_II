@@ -12,7 +12,7 @@ namespace SoundStudio.Model
     #region " Properties, Constructor "
 
         // position in the melody
-        private double position;
+        private int position;
 
         public SoundPosition(int x) {
             this.position = x;
@@ -34,7 +34,7 @@ namespace SoundStudio.Model
 
     #region " Fields "
 
-        public double Position
+        public int Position
         {
             get { 
                 return position; 

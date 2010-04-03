@@ -14,7 +14,6 @@ namespace SoundStudio.View
         public int width;
         public int height;
 
-        private Model.Icon icon;
         private Model.Sound sound;
 
 
@@ -23,11 +22,7 @@ namespace SoundStudio.View
             return __nextIndex++;
         }
 
-        public Model.Icon Icon {
-            get {
-                return icon;
-            }
-        }
+      
 
         public Model.Sound Sound {
             get {
@@ -57,7 +52,8 @@ namespace SoundStudio.View
             //this.Click += new System.EventHandler(this.onClick);
         }
         public PlayButton SetIcon(string iconPath) {
-            this.icon = new Model.Icon(iconPath);          
+            string localPath = Model.Consts.Paths.CombinePath(iconPath);
+            this.Image = System.Drawing.Image.FromFile(localPath);      
             return this;
         }
 

@@ -5,29 +5,14 @@ using System.Text;
 
 namespace SoundStudio.Model
 {
-    public class Stave : System.Collections.Generic.List<Stave.StaveObject>
+    public class Stave : System.Collections.Generic.List<View.MovablePictureBox>
     {
-        public struct StaveObject {
-            Model.Icon icon;
-            int x, y;
-            public StaveObject(Model.Icon _icon, int _x, int _y) {
-                this.icon = _icon;
-                this.x = _x;
-                this.y = _y;
-            }
-            public Model.Icon Icon {
-                get {
-                    return this.icon;
-                }
-            }
-
-            public System.Drawing.Point Point {
-                get {
-                    System.Drawing.Point point = new System.Drawing.Point(this.x, this.y);
-                    return point;
-                }
-            }
+        Melody melody;
+        public Stave(Melody melody) {
+            this.melody = melody;
         }
-    
+        public new void Add(View.MovablePictureBox movablePictureBox) {
+            base.Add(movablePictureBox);
+        }
     }
 }

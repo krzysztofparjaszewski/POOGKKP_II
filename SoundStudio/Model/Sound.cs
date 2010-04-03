@@ -22,8 +22,7 @@ namespace SoundStudio.Model
             if (fInfo.Exists) {
                 this.sPlayer.SoundLocation = localPath;
                 this.sPlayer.Load();
-            }
-            else { 
+            } else { 
                 // todo error handling
             }
         }
